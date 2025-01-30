@@ -181,7 +181,7 @@ public class TestDropdownMenuVisible {
        // // Select a specific date, e.g., 27th of the current month
        // WebElement dateToSelect = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text()='25']")));
        // dateToSelect.click();
-       // System.out.println("Date '27' selected");
+       //System.out.println("Date '27' selected");
 
 
     }
