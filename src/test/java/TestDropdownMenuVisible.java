@@ -171,6 +171,19 @@ public class TestDropdownMenuVisible {
             System.out.println("Radio button is not available or clickable.");
         }
 
+
+        // 3 Radio buttons choosing between
+        WebElement radioButtons = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#chk_hospotal_readmission")));
+
+        // Check if the radio button is enabled and displayed
+        if (radioButton != null && radioButtons.isDisplayed() && radioButtons.isEnabled()) {
+            // Click on the radio button
+            radioButtons.click();
+            System.out.println("Radio button is present and clicked.");
+        } else {
+            System.out.println("Radio button is not available or clickable.");
+        }
+
        // //Switch to the iframe containing the Datepicker
        // driver.switchTo().frame(driver.findElement(By.cssSelector("#appointment > div > div > form > div:nth-child(4) > div > div")));
        // // Wait until the Datepicker element is visible and click it
