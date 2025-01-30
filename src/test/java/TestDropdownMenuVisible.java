@@ -152,11 +152,38 @@ public class TestDropdownMenuVisible {
         // Iterate through options and print or return the text of each option
         for (WebElement option : options) {
            // System.out.println(option.getAttribute("value")); // Print the value attribute
-            if (Objects.equals(option.getAttribute("value"), "Seoul CURA Healthcare Center")) { // Match by value
+            if (Objects.equals(option.getAttribute("value"), "Hongkong CURA Healthcare Center")) { // Match by value
                 option.click(); // Select the option by value
                 break; // Exit the loop after selecting the desired option
             }
         }
+
+
+        // Wait until the radio button is visible and present
+        WebElement radioButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#chk_hospotal_readmission")));
+
+        // Check if the radio button is enabled and displayed
+        if (radioButton != null && radioButton.isDisplayed() && radioButton.isEnabled()) {
+            // Click on the radio button
+            radioButton.click();
+            System.out.println("Radio button is present and clicked.");
+        } else {
+            System.out.println("Radio button is not available or clickable.");
+        }
+
+
+
+        // Switch to the iframe containing the Datepicker
+       // driver.switchTo().frame(driver.findElement(By.cssSelector("#appointment > div > div > form > div:nth-child(4) > div > div")));
+       // // Wait until the Datepicker element is visible and click it
+       // WebElement datepicker = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("body > div > div.datepicker-days"))
+       // );
+       // datepicker.click();
+       // System.out.println("Datepicker opened");
+       // // Select a specific date, e.g., 27th of the current month
+       // WebElement dateToSelect = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text()='25']")));
+       // dateToSelect.click();
+       // System.out.println("Date '27' selected");
 
 
     }
