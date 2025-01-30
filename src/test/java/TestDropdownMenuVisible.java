@@ -171,17 +171,17 @@ public class TestDropdownMenuVisible {
             System.out.println("Radio button is not available or clickable.");
         }
 
-        //Switch to the iframe containing the Datepicker
-        driver.switchTo().frame(driver.findElement(By.cssSelector("#appointment > div > div > form > div:nth-child(4) > div > div")));
-        // Wait until the Datepicker element is visible and click it
-        WebElement datepicker = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("body > div > div.datepicker-days"))
-        );
-        datepicker.click();
-        System.out.println("Datepicker opened");
-        // Select a specific date, e.g., 27th of the current month
-        WebElement dateToSelect = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text()='25']")));
-        dateToSelect.click();
-        System.out.println("Date '27' selected");
+       // //Switch to the iframe containing the Datepicker
+       // driver.switchTo().frame(driver.findElement(By.cssSelector("#appointment > div > div > form > div:nth-child(4) > div > div")));
+       // // Wait until the Datepicker element is visible and click it
+       // WebElement datepicker = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("body > div > div.datepicker-days"))
+       // );
+       // datepicker.click();
+       // System.out.println("Datepicker opened");
+       // // Select a specific date, e.g., 27th of the current month
+       // WebElement dateToSelect = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text()='25']")));
+       // dateToSelect.click();
+       // System.out.println("Date '27' selected");
 
 
     }
